@@ -5,22 +5,41 @@ export default class Map extends Component {
 
   state = {
     viewport: {
-      width: 400,
-      height: 400,
-      latitude: 37.7577,
-      longitude: -122.4376,
+      width: '100vw',
+      height: '100vh',
+      latitude: 42.663470, 
+      longitude: 21.161588,
       zoom: 8
     }
   };
 
+  componentDidMount() {
+    if (window.innerWidth > 600) {
+      this.setState({
+        ...this.state,
+        viewport: {
+          ...this.state.viewport,          
+          width: '600px',
+          height: '600px',
+        }          
+      });
+    } else {
+      this.setState({
+        viewport: {
+          width: '100vw',
+          height: '100vh',
+        }
+      })
+    }
+  }
+
+
   render() {
-    console.log(this.props);
-    
     return (
       <ReactMapGL
         {...this.state.viewport}
         onViewportChange={(viewport) => this.setState({viewport})}
-        mapboxApiAccessToken={this.props.opts.accessToken}
+        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}  
       />
     );
   }
