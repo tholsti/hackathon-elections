@@ -2,10 +2,13 @@ import React from 'react';
 import './App.css';
 import Map from './components/Map';
 import Axios from 'axios';
+import SearchResult from './components/SearchResult';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
 const App = () => { 
   const [address, setAddress] = React.useState('');
+  const [searchResult, setSearchResult] = React.useState([]);
+  const [selection, setSelection] = React.useState(null);
 
   const opts = {
       mapbox: mapboxgl,
@@ -14,10 +17,8 @@ const App = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    console.log(e.target.value)
-    const result = await Axios.get(`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ}&q=${address}&format=json`)
-    
-    console.log(result)
+    const result = await Axios.get(`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ}&q=${address}&format=json`);
+    setSearchResult(result);
   }
   
   return (
@@ -30,7 +31,13 @@ const App = () => {
             <input name={'address'} onChange={e => setAddress(e.target.value)} placeholder={'address'}/>
             <button type={'submit'}>Search</button>
           </form>
-          Here be map        
+          {!selection 
+            ? <SearchResult searchResult={searchResult} setSearchResult={setSearchResult} setSelection={setSelection}/>
+            : <div>{selection.display_name}
+            lon: {selection.lat}
+            lat: {selection.lon}</div>
+            }
+          
           <Map opts={opts}/>
       </header>
     </div>
