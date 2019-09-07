@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@mapbox/mapbox-gl-geocoder": "^4.4.1",
+    "@turf/turf": "^5.1.6",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "dot-env": "0.0.1",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { comments } from '../comments.json';
+import { comments } from '../assets/comments.json';
 import styled, { keyframes } from 'styled-components';
 
 const moveComments = keyframes`
