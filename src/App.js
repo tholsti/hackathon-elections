@@ -3,6 +3,7 @@ import Map from './components/Map';
 import Axios from 'axios';
 import SearchResult from './components/SearchResult';
 import Footer from './components/Footer';
+import { Navbar } from 'reactstrap';
 import styled from 'styled-components';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -60,7 +61,7 @@ const App = () => {
   return (
     <AppContainer className="App">
       <AppHeader className="App-header">        
-          Kosovo elections
+        <Navbar/>
         <form onSubmit={handleSubmit}>
           <input name={'address'} onChange={e => setAddress(e.target.value)} placeholder={'address'}/>
           <button type={'submit'}>Search</button>
@@ -72,10 +73,10 @@ const App = () => {
           : <div>{selection.display_name}
           lon: {selection.lat}
           lat: {selection.lon}</div>
-          }
-        {/* <MapContainer> */}
+        }
+        <MapContainer>
           <Map selection={selection} opts={opts}/>  
-        {/* </MapContainer>   */}
+        </MapContainer>  
       </Main>
       <Footer/>
     </AppContainer>
