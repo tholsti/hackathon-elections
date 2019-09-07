@@ -12,26 +12,6 @@ export default class Map extends Component {
     }
   };
 
-  componentDidMount() {
-    if (window.innerWidth > 600) {      
-        this.setState({
-        ...this.state,
-        viewport: {          
-          width: '600px',
-          height: '600px',
-        }          
-      });
-    } else {
-      this.setState({
-        ...this.state,
-        viewport: {
-          width: '95%',
-          height: '100%',
-        }
-      })
-    }
-  }
-
   render() {
     const { selection } = this.props;
 
