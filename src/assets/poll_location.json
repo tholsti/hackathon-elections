@@ -1,0 +1,304 @@
+[
+    {
+        "place_id": "359606",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "150906142",
+        "boundingbox": [
+            "42.2089156",
+            "42.2090156",
+            "20.7403742",
+            "20.7404742"
+        ],
+        "lat": "42.2089656",
+        "lon": "20.7404242",
+        "display_name": "Prizren, Shadërvan, Panteli, Prizren, Municipality of Prizren, 3400, Kosovo",
+        "class": "historic",
+        "type": "capital",
+        "importance": 0.62884835448999
+    },
+    {
+        "place_id": "18174037",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "1839805748",
+        "boundingbox": [
+            "42.500537",
+            "42.580537",
+            "20.2501339",
+            "20.3301339"
+        ],
+        "lat": "42.540537",
+        "lon": "20.2901339",
+        "display_name": "Deçan, Municipality of Deçan / Dečane, 51000, Kosovo",
+        "class": "place",
+        "type": "town",
+        "importance": 0.3,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_town.p.20.png"
+    },
+	    {
+        "place_id": "19092563",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "1957422741",
+        "boundingbox": [
+            "42.5824393",
+            "42.6624393",
+            "20.8534832",
+            "20.9334832"
+        ],
+        "lat": "42.6224393",
+        "lon": "20.8934832",
+        "display_name": "Drenas, Municipality of Drenas / Glogovac, 13000, Kosovo",
+        "class": "place",
+        "type": "town",
+        "importance": 0.4,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_town.p.20.png"
+    },
+	{
+        "place_id": "223957577",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "relation",
+        "osm_id": "8600255",
+        "boundingbox": [
+            "42.0505251",
+            "42.0743224",
+            "20.6200651",
+            "20.6594245"
+        ],
+        "lat": "42.0625679",
+        "lon": "20.6534174",
+        "display_name": "Dragaš - Dragash, Municipality of Dragash / Dragaš, 5000, Kosovo",
+        "class": "boundary",
+        "type": "administrative",
+        "importance": 0.44310903513115,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_boundary_administrative.p.20.png"
+    },
+	 {
+        "place_id": "50379093",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "3962446463",
+        "boundingbox": [
+            "42.1904551",
+            "42.2704551",
+            "21.2169046",
+            "21.2969046"
+        ],
+        "lat": "42.2304551",
+        "lon": "21.2569046",
+        "display_name": "Kaçanik, Municipality of Kaçanik / Kačanik, 71000, Kosovo",
+        "class": "place",
+        "type": "town",
+        "importance": 0.45044535136238,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_town.p.20.png"
+    },
+	{
+        "place_id": "3573644",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "430705589",
+        "boundingbox": [
+            "42.5799012",
+            "42.6599012",
+            "20.5379733",
+            "20.6179733"
+        ],
+        "lat": "42.6199012",
+        "lon": "20.5779733",
+        "display_name": "Klinë, Municipality of Klina, 32000, Kosovo",
+        "class": "place",
+        "type": "town",
+        "importance": 0.55036354121004,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_town.p.20.png"
+    },
+	{
+        "place_id": "223842093",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "relation",
+        "osm_id": "7461229",
+        "boundingbox": [
+            "42.6110717",
+            "42.6618332",
+            "21.0664461",
+            "21.1221415"
+        ],
+        "lat": "42.6374117",
+        "lon": "21.093132",
+        "display_name": "Fushë Kosovë, Municipality of Fushë Kosovë / Kosovo Polje, Kosovo",
+        "class": "boundary",
+        "type": "administrative",
+        "importance": 0.61441676087681,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_boundary_administrative.p.20.png"
+    },
+	{
+        "place_id": "3166459",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "369559187",
+        "boundingbox": [
+            "42.5412894",
+            "42.6212894",
+            "21.5411607",
+            "21.6211607"
+        ],
+        "lat": "42.5812894",
+        "lon": "21.5811607",
+        "display_name": "Kamenicë, Municipality of Kamenica, 62000, Kosovo",
+        "class": "place",
+        "type": "town",
+        "importance": 0.51343064334817,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_town.p.20.png"
+    },
+	{
+        "place_id": "16499922",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "1640485042",
+        "boundingbox": [
+            "42.725298",
+            "43.045298",
+            "20.7073427",
+            "21.0273427"
+        ],
+        "lat": "42.885298",
+        "lon": "20.8673427",
+        "display_name": "Mitrovicë, Municipality of Mitrovica South, 40000, Kosovo",
+        "class": "place",
+        "type": "city",
+        "importance": 0.55324764589375,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_city.p.20.png"
+    },
+	{
+        "place_id": "3771796",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "448739405",
+        "boundingbox": [
+            "43.0645716",
+            "43.1445716",
+            "20.7646687",
+            "20.8446687"
+        ],
+        "lat": "43.1045716",
+        "lon": "20.8046687",
+        "display_name": "Leposavić, Municipality of Leposavić / Leposaviq, 38218, Kosovo",
+        "class": "place",
+        "type": "town",
+        "importance": 0.56212269272433,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_town.p.20.png"
+    },
+	{
+        "place_id": "223904730",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "relation",
+        "osm_id": "8090207",
+        "boundingbox": [
+            "42.5067416",
+            "42.5429446",
+            "21.0941959",
+            "21.1504459"
+        ],
+        "lat": "42.5225101",
+        "lon": "21.12265",
+        "display_name": "Lipjan, Municipality of Lipjan / Lipljan, 14000, Kosovo",
+        "class": "boundary",
+        "type": "administrative",
+        "importance": 0.53267037181301,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_boundary_administrative.p.20.png"
+    },
+	    {
+        "place_id": "223910354",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "relation",
+        "osm_id": "8180500",
+        "boundingbox": [
+            "42.6677525",
+            "42.7055253",
+            "21.0489521",
+            "21.1295714"
+        ],
+        "lat": "42.6844495",
+        "lon": "21.0706963",
+        "display_name": "Obiliq, Municipality of Obiliq / Obilić, 15000, Kosovo",
+        "class": "boundary",
+        "type": "administrative",
+        "importance": 0.43569125616701,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_boundary_administrative.p.20.png"
+    },
+    {
+        "place_id": "223792081",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "relation",
+        "osm_id": "7248049",
+        "boundingbox": [
+            "43.0648277",
+            "43.0874135",
+            "21.7257857",
+            "21.770997"
+        ],
+        "lat": "43.07625485",
+        "lon": "21.7528773560947",
+        "display_name": "Obilic, Bojnik Municipality, Jablanica Administrative District, Central Serbia, Serbia",
+        "class": "boundary",
+        "type": "administrative",
+        "importance": 0.3,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_boundary_administrative.p.20.png"
+    },
+	{
+        "place_id": "46744746",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "3563254193",
+        "boundingbox": [
+            "42.722042",
+            "42.762042",
+            "20.0343967",
+            "20.0743967"
+        ],
+        "lat": "42.742042",
+        "lon": "20.0543967",
+        "display_name": "Bogë, Kosovo",
+        "class": "place",
+        "type": "village",
+        "importance": 0.47329922975202,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_village.p.20.png"
+    },
+	{
+        "place_id": "223774770",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "relation",
+        "osm_id": "7118787",
+        "boundingbox": [
+            "42.6290946",
+            "42.696965",
+            "21.1066293",
+            "21.2136267"
+        ],
+        "lat": "42.6638771",
+        "lon": "21.1640849",
+        "display_name": "Pristina, Municipality of Pristina, Kosovo",
+        "class": "place",
+        "type": "city",
+        "importance": 0.375,
+        "icon": "https://locationiq.org/static/images/mapicons/poi_place_city.p.20.png"
+    },
+	 {
+        "place_id": "359606",
+        "licence": "https://locationiq.com/attribution",
+        "osm_type": "node",
+        "osm_id": "150906142",
+        "boundingbox": [
+            "42.2089156",
+            "42.2090156",
+            "20.7403742",
+            "20.7404742"
+        ],
+        "lat": "42.2089656",
+        "lon": "20.7404242",
+        "display_name": "Prizren, Shadërvan, Panteli, Prizren, Municipality of Prizren, 3400, Kosovo",
+        "class": "historic",
+        "type": "capital",
+        "importance": 0.62884835448999
+    }	
+]
