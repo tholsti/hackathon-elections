@@ -3,7 +3,7 @@ import Map from './components/Map';
 import Axios from 'axios';
 import SearchResult from './components/SearchResult';
 import Footer from './components/Footer';
-import { Navbar } from 'reactstrap';
+import { Collapse, Navbar, NavbarBrand, NavItem, NavLink, NavbarToggler } from 'reactstrap';
 import styled from 'styled-components';
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -13,13 +13,15 @@ const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
   height: 100vh;
 `
 
 const AppHeader = styled.header`
+  width: 100vw;
+  padding-top: 76px;
   background-color: #282c34;
   display: flex;
   flex-direction: column;
@@ -37,8 +39,8 @@ const MapContainer = styled.div`
 const Main = styled.main`
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  width: 100vw;
+  height: 50%;
+  width: 90%;
   background-color: #282c34;
 `;
 
@@ -46,10 +48,12 @@ const App = () => {
   const [address, setAddress] = React.useState('');
   const [searchResult, setSearchResult] = React.useState([]);
   const [selection, setSelection] = React.useState(null);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [view, setView] = React.useState('map');
 
   const opts = {
       mapbox: mapboxgl,
-      style: 'mapbox://styles/mapbox/streets-v9',
+      style: 'mapbox://styles/atahanc/ck09f2igy1te21cn4xewrs47e',
   }
 
   const handleSubmit = async e => {
@@ -57,26 +61,47 @@ const App = () => {
     const result = await Axios.get(`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ}&q=${address}&format=json`);
     setSearchResult(result);
   }
+
+  const handleViewChange = newView => {
+    setView(newView);
+    setIsOpen(false);
+  }
   
   return (
     <AppContainer className="App">
+        <Navbar color="dark" expand="md" dark style={{ width: '100vw', position: 'fixed' }}>
+          <NavbarBrand href="/">Kosovo Elections</NavbarBrand>
+          <NavbarToggler onClick={() => setIsOpen(!isOpen)}/>
+          <Collapse isOpen={isOpen} navbar>
+            {/* <NavItem> */}
+                <NavLink onClick={() => handleViewChange('map')}>Map</NavLink>
+            {/* </NavItem> */}
+            {/* <NavItem> */}
+                <NavLink onClick={() => handleViewChange('comments')}>Comments</NavLink>
+            {/* </NavItem> */}
+          </Collapse>
+        </Navbar>
       <AppHeader className="App-header">        
-        <Navbar/>
         <form onSubmit={handleSubmit}>
           <input name={'address'} onChange={e => setAddress(e.target.value)} placeholder={'address'}/>
           <button type={'submit'}>Search</button>
         </form>
-      </AppHeader>
-      <Main>
         {!selection 
           ? <SearchResult searchResult={searchResult} setSearchResult={setSearchResult} setSelection={setSelection}/>
           : <div>{selection.display_name}
           lon: {selection.lat}
           lat: {selection.lon}</div>
         }
-        <MapContainer>
+      </AppHeader>
+      <Main>
+        {
+          view === 'map' &&
           <Map selection={selection} opts={opts}/>  
-        </MapContainer>  
+        }
+        {
+          view === 'comments' &&
+          'what do you think?'
+        }
       </Main>
       <Footer/>
     </AppContainer>
