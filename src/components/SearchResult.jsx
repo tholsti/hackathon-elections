@@ -19,19 +19,20 @@ const Result = styled.div`
   padding-bottom: 6px;
 `;
 
-const SearchResult = props => {
-  
+const SearchResult = (props) => {
+  const { searchResult } = props;
   return (
     <Container>
       <Results>
-        {props.searchResult.data && props.searchResult.data.map(r => (
-        <Result onClick={() => {
-          props.setSelection(r);
-          props.setSearchResult(null);
-          }}
-        >
-          {r.display_name}
-        </Result>
+        {searchResult.data && searchResult.data.map(r => (
+          <Result onClick={() => {
+            props.setSelection(r);
+            props.setSearchResult(null);
+            props.setAddress('');
+            }}
+          >
+            {r.display_name}
+          </Result>
         ))}
       </Results>
     </Container>

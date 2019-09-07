@@ -79,6 +79,7 @@ const App = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    reset();
     const result = await Axios.get(`https://eu1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATION_IQ}&q=${address}&format=json`);
     setSearchResult(result);
   }
@@ -86,7 +87,14 @@ const App = () => {
   const handleViewChange = newView => {
     setView(newView);
     setIsOpen(false);
-  }
+  };
+
+  const reset = () => {
+    setAddress('');
+    setSearchResult([]);
+    setSelection(null);
+    setNearest(null);
+  };
 
   React.useEffect(() => {
     if (!selection) {
@@ -118,13 +126,18 @@ const App = () => {
           </Collapse>
         </Navbar>
       {view === 'map' && (
-        <AppHeader className="App-header">        
+        <AppHeader className="App-header">
           <Form onSubmit={handleSubmit}>
             <input name={'address'} onChange={e => setAddress(e.target.value)} placeholder={'Enter your address'}/>
             <Button type={'submit'}>Search</Button>
           </Form>
           {!selection 
-            ? <SearchResult searchResult={searchResult} setSearchResult={setSearchResult} setSelection={setSelection}/>
+            ? <SearchResult
+                setAddress={setAddress}
+                searchResult={searchResult}
+                setSearchResult={setSearchResult}
+                setSelection={setSelection}
+              />
             : <NearestPollingStation info={nearest}/>
           }
         </AppHeader>)

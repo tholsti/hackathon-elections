@@ -26,15 +26,17 @@ const Comment = styled.div`
 
 const Footer = () => {
   const [width, setWidth] = React.useState('0');
+  const [color, setColor] = React.useState('');
 
   React.useEffect(() => {
     setWidth(document.querySelector('#footer').scrollWidth);
+    setColor(`rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`)
   }, []);
   
   return (
     <StyledFooter width={width} id={'footer'}>
       {comments.map(c => (
-        <Comment style={{background: `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`}}>
+        <Comment style={{background: color}}>
           {c}
         </Comment>
       ))}
