@@ -11,7 +11,7 @@ const SearchResult = props => {
         props.setSearchResult(null);
         }}
       >
-          {r.display_name}
+        {r.display_name}
       </div>
       ))}
     </>
