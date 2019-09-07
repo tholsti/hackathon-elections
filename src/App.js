@@ -58,7 +58,11 @@ const Form = styled.form`
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-`
+`;
+
+const Debate = styled.div`
+  padding-top: 76px;
+`;
 
 const App = () => { 
   const [address, setAddress] = React.useState('');
@@ -90,14 +94,16 @@ const App = () => {
     }
     const points = [];
     pollingStations.forEach(station => {
-      points.push(point([station.lat, station.lon]));
+      console.log(station)
+      points.push(point([station.lat, station.lon], {
+        location: station.display_name,        
+      }));
     });
 
     const pointsCollection = featureCollection(points);    
     const targetPoint = point([selection.lat, selection.lon]);
 
     var nearestP = nearestPoint(targetPoint, pointsCollection);
-    console.log(nearestP);
     setNearest(nearestP);
   }, [selection])
   
@@ -130,7 +136,10 @@ const App = () => {
         }
         {
           view === 'debate' &&
-          'what do you think?'
+          <Debate>
+            What do you think?
+            <input/>
+          </Debate>
         }
       </Main>
       <Footer/>
